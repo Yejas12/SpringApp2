@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:Text="${titulo}">Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+<body>
+
+<div>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">NOMBRE</th>
+            <th scope="col">TELEFONO</th>
+        </tr>
+        </thead>
+        <tbody th:each="temList: ${datos}">
+        <tr>
+            <td th:Text="${temList.id}">Mark</td>
+            <td th:Text="${temList.nombre}">Mark</td>
+            <td th:Text="${temList.telefono}">Mark</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>
